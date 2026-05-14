@@ -1,0 +1,62 @@
+.social-bar {
+  background: var(--black);
+  padding: 32px 24px 36px;
+  border-top: 1px solid rgba(201,168,76,0.15);
+  border-bottom: 1px solid rgba(201,168,76,0.15);
+}
+
+.social-bar__inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 36px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255,255,255,0.12);
+  background: var(--dark-card);
+  color: var(--s-color);
+  transition:
+    transform 0.3s cubic-bezier(.22,.68,0,1.3),
+    border-color 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.social-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: var(--s-bg);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.social-btn:hover {
+  transform: translateY(-6px) scale(1.12);
+  border-color: var(--s-color);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.4), 0 0 18px color-mix(in srgb, var(--s-color) 40%, transparent);
+}
+
+.social-btn:hover::before {
+  opacity: 1;
+}
+
+.social-btn__icon {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

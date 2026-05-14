@@ -127,4 +127,8 @@
   .hero__headline {
     padding-top: 90px;
   }
+  .hero__title {
+    position: absolute;
+    top: 450px;
+  }
 }

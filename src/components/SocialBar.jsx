@@ -23,7 +23,7 @@ const TikTokIcon = () => (
 const socials = [
   {
     id: 'whatsapp',
-    href: 'https://wa.me/VOTRE_NUMERO', // à compléter
+    href: 'https://wa.me/682668324', // à compléter
     icon: <WhatsAppIcon />,
     label: 'WhatsApp',
     color: '#25D366',
@@ -31,7 +31,7 @@ const socials = [
   },
   {
     id: 'facebook',
-    href: 'https://facebook.com/VOTRE_PAGE', // à compléter
+    href: 'https://web.facebook.com/people/Vision-plus-btp/61589884192903/?mibextid=wwXIfr&rdid=dTvJoEzvDWULHTl4&share_url=https%3A%2F%2Fweb.facebook.com%2Fshare%2F18HXcRYrRe%2F%3Fmibextid%3DwwXIfr%26_rdc%3D1%26_rdr', // à compléter
     icon: <FacebookIcon />,
     label: 'Facebook',
     color: '#1877F2',
@@ -39,7 +39,7 @@ const socials = [
   },
   {
     id: 'tiktok',
-    href: 'https://tiktok.com/@VOTRE_COMPTE', // à compléter
+    href: 'https://www.tiktok.com/@gsbpl4?_r=1&_t=ZS-96NPnTIAYEv', // à compléter
     icon: <TikTokIcon />,
     label: 'TikTok',
     color: '#ffffff',

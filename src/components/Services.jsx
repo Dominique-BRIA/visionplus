@@ -4,37 +4,47 @@ import './Services.css'
 const services = [
   {
     id: 'academy',
-    logo: '/images/logo-school.jpg',
+    logo: '/images/logo-accademy.jpg',
     title: 'ACADEMY',
     description:
-      'Comment faites-vous remarquer votre entreprise ? Nous fournissons des solutions de marketing numérique pour que les gens puissent facilement trouver votre entreprise.',
+      'Groupe Scolaire Bilingue Panafricain — Former aujourd\'hui les leaders africains de demain. Cliquez pour en savoir plus.',
+    page: 'academy',
   },
   {
     id: 'btp',
     logo: '/images/logo-btp.jpg',
     title: 'BTP',
     description:
-      'Faites entrer votre marketing dans l\'ère moderne en utilisant des canaux tels que les médias sociaux et le Web.',
+      "La perfection n'est pas de faire des choses extraordinaires, mais de faire des choses ordinaires de façon extraordinaire.\n Cliquez pour en savoir plus.",
+    page: 'btp',
   },
   {
     id: 'immobilier',
     logo: '/images/logo-immobilier.jpg',
     title: 'IMMOBILIER',
     description:
-      'Faites entrer votre marketing dans l\'ère moderne en utilisant des canaux tels que les médias sociaux et le Web.',
+      "L'immobilier est le meilleur investissement sur la terre, car c’est la seule chose qui ne s'en va pas. Cliquez pour en savoir plus.",
+    page: null,
   },
   {
     id: 'quincaillerie',
     logo: '/images/logo-quincaillerie.jpg',
     title: 'QUINCAILLERIE',
     description:
-      'Faites entrer votre marketing dans l\'ère moderne en utilisant des canaux tels que les médias sociaux et le Web.',
+      "La quincaillerie est l'art de faire des choses simples de façon efficace.\n Cliquez pour en savoir plus.",
+    page: "quincaillerie",
   },
 ]
 
-function ServiceCard({ logo, title, description }) {
+function ServiceCard({ logo, title, description, page, onNavigate }) {
+  const clickable = !!page
   return (
-    <div className="service-card">
+    <div
+      className={`service-card${clickable ? ' service-card--link' : ''}`}
+      onClick={() => clickable && onNavigate(page)}
+      title={clickable ? `Ouvrir ${title}` : undefined}
+    >
+      {clickable && <span className="service-card__badge">Voir →</span>}
       <div className="service-card__logo-wrap">
         <img src={logo} alt={title} className="service-card__logo" />
         <div className="service-card__logo-glow" />
@@ -46,7 +56,7 @@ function ServiceCard({ logo, title, description }) {
   )
 }
 
-function Services() {
+function Services({ onNavigate }) {
   return (
     <section className="services">
       <div className="services__header">
@@ -55,7 +65,7 @@ function Services() {
       </div>
       <div className="services__grid">
         {services.map((s) => (
-          <ServiceCard key={s.id} {...s} />
+          <ServiceCard key={s.id} {...s} onNavigate={onNavigate} />
         ))}
       </div>
     </section>

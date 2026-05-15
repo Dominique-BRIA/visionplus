@@ -23,7 +23,7 @@ const TikTokIcon = () => (
 const socials = [
   {
     id: 'whatsapp',
-    href: 'https://wa.me/682668324', // à compléter
+    href: 'https://wa.me/681668324', // à compléter
     icon: <WhatsAppIcon />,
     label: 'WhatsApp',
     color: '#25D366',

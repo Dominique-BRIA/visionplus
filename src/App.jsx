@@ -20,7 +20,7 @@ function App() {
     <div className="app">
       {/* ── En-tête commun ── */}
       <Hero
-        bgImage={currentPage === 'academy' ? '/images/logo-school.jpg' : '/images/team.jpg'}
+        bgImage={currentPage === 'academy' ? '/images/logo-school.jpg'  : '/images/team.jpg'}
         logoImg={currentPage === 'academy' ? '/images/logo-accademy.jpg' : '/images/logo-vp.jpg'}
         title={currentPage === 'academy' ? 'GROUPE SCOLAIRE BILINGUE PANAFRICAIN LES LEADERS' : "L'EXCELLENCE AU SERVICE DE VOS BESOINS"}
       />

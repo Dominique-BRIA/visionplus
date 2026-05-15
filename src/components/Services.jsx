@@ -4,7 +4,7 @@ import './Services.css'
 const services = [
   {
     id: 'academy',
-    logo: '/images/logo-accademy.jpg',
+    logo: '/images/logo-school.jpg',
     title: 'ACADEMY',
     description:
       'Comment faites-vous remarquer votre entreprise ? Nous fournissons des solutions de marketing numérique pour que les gens puissent facilement trouver votre entreprise.',
